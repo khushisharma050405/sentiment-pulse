@@ -1,0 +1,5 @@
+:root{--bg:#EFE7E4;--card:#F8F3F1;--ink:#2B2523;--muted:#7A6E6A;--line:#E0D3CE;--rose:#C9A39A;--pos:#6B7140;--neg:#B5646C;--neu:#8A8380;--btn:#6B4A4F;--btnink:#F8F3F1;--plum:#5E4549;--dark:#2A2422;--rail:#2A2422;--railink:#EFE7E4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 'DM Sans',system-ui,sans-serif}
+#root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}

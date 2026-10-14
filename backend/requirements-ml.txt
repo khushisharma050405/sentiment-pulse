@@ -1,0 +1,3 @@
+# Optional: RoBERTa engine (set SENTIMENT_ENGINE=transformer)
+transformers>=4.40
+torch>=2.2

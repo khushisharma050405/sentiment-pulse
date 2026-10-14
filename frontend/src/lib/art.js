@@ -1,0 +1,9 @@
+// Inline SVG illustrations (theme-aware via CSS variables).
+const face=(x,y,r,m)=>`<circle class="s-c" cx="${x}" cy="${y}" r="${r}"/><circle class="s-k" cx="${x-6}" cy="${y-5}" r="2.2"/><circle class="s-k" cx="${x+6}" cy="${y-5}" r="2.2"/><path class="s-ks" d="${m>0?`M${x-7} ${y+4}q7 8 14 0`:m<0?`M${x-7} ${y+9}q7-8 14 0`:`M${x-6} ${y+6}h12`}"/>`;
+const bub=(d,c,fx,fy,fr,m,t,w1,w2)=>`<path class="${c}" d="${d}"/>${face(fx,fy,fr,m)}<rect class="s-c" x="${t[0]}" y="${t[1]}" width="${w1}" height="7" rx="3.5" opacity=".85"/><rect class="s-c" x="${t[0]}" y="${t[1]+16}" width="${w2}" height="7" rx="3.5" opacity=".5"/>`;
+export const bubbles=()=>`<svg viewBox="0 0 360 230" role="img" aria-label="Speech bubbles showing positive, negative and neutral sentiment"><circle class="s-r" cx="190" cy="118" r="104"/>`+
+bub("M24 24H174a14 14 0 0 1 14 14V84a14 14 0 0 1-14 14H64l-22 18V98H24a14 14 0 0 1-14-14V38a14 14 0 0 1 14-14z","s-p",44,61,18,1,[72,50],96,64)+
+`<g transform="translate(172 104)">`+bub("M14 0H164a14 14 0 0 1 14 14V60a14 14 0 0 1-14 14H150L136 92V74H14A14 14 0 0 1 0 60V14A14 14 0 0 1 14 0z","s-n",34,37,18,-1,[62,26],96,58)+`</g><g transform="translate(14 148)">`+
+bub("M14 0H116a14 14 0 0 1 14 14V42a14 14 0 0 1-14 14H40L24 72V56H14A14 14 0 0 1 0 42V14A14 14 0 0 1 14 0z","s-u",26,28,14,0,[48,20],64,42)+`</g></svg>`;
+const card=(y,c)=>`<rect class="s-c s-ln" x="236" y="${y}" width="116" height="44" rx="10"/><rect class="${c}" x="236" y="${y}" width="7" height="44" rx="3"/><rect class="s-k" x="254" y="${y+12}" width="80" height="6" rx="3" opacity=".55"/><rect class="s-k" x="254" y="${y+25}" width="52" height="6" rx="3" opacity=".25"/>`;
+export const hashtag=()=>`<svg viewBox="0 0 360 230" role="img" aria-label="A hashtag beside three scored social posts"><circle class="s-r" cx="130" cy="118" r="104"/><path class="s-rs" d="M138 42L116 190M196 42L174 190M92 98H220M80 142H208"/>`+card(34,"s-p")+card(92,"s-u")+card(150,"s-n")+`</svg>`;
